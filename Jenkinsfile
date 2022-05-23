@@ -15,9 +15,9 @@ pipeline {
      stage('Build Docker Image'){
             steps{
                  sh 'docker version'
+                 sh 'docker image prune -af --filter "until=24h"'
                  sh 'docker build -t wordpress .'
                  sh 'docker image list'
-                 sh 'docker image prune -af --filter "until=24h"'
                  sh 'docker tag wordpress kathiriya007/wordpress:$BUILD_NUMBER'
             }
         } 
