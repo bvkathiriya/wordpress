@@ -44,7 +44,14 @@ pipeline {
         withKubeConfig([credentialsId: 'kubernetes']) { 
           sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" deployments_wp.yaml'
           sh 'kubectl apply -f deployments_wp.yaml  --validate=false'
-          sh 'kubectl apply -f mysql_deployment.yml, mysql-pv.yaml, mysql-pvc.yaml, mysql_svc.yaml, secrets.yml, wp-pv.yaml, wp-pvc.yaml, wp_svc.yaml'
+          sh 'kubectl apply -f mysql_deployment.yml'
+          sh 'kubectl -f mysql-pv.yaml'
+          sh 'kubectl -f mysql-pvc.yaml'
+          sh 'kubectl -f mysql_svc.yaml'
+          sh 'kubectl -f secrets.yml'
+          sh 'kubectl -f wp-pv.yaml'
+          sh 'kubectl -f wp-pvc.yaml'
+          sh 'kubectl -f wp_svc.yaml'
           
         }
       } 
