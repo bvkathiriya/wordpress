@@ -43,8 +43,8 @@ pipeline {
       steps {
         withKubeConfig([credentialsId: 'kubernetes']) { 
           sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" deployments_wp.yaml'
-          sh 'kubectl apply -f deployments_wp.yaml  --validate=false'
-          sh 'kubectl apply -f ./'
+          
+          sh 'kubectl apply -f ./ --validate=false'
           
         }
       } 
