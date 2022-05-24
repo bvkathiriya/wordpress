@@ -35,6 +35,7 @@ pipeline {
         stage('Cleaning up') {
             steps{
                 sh 'docker rmi kathiriya007/wordpress:$BUILD_NUMBER'
+                sh 'docker image prune -af --filter "until=24h"'
             }
         }
     
