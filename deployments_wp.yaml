@@ -29,7 +29,4 @@ spec:
           - name: WORDPRESS_DEBUG
             value: “1”
           - name: WORDPRESS_DB_PASSWORD
-            valueFrom:
-            secretKeyRef:
-              name: mysql-pass
-              key: password
+            value: DEVOPS12345
