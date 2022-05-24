@@ -27,8 +27,5 @@ spec:
         - name: MYSQL_DATABASE
           value: wpdb
         - name: WORDPRESS_DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-pass
-              key: password
+          value: DEVOPS12345
 
