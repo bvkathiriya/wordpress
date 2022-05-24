@@ -24,7 +24,11 @@ spec:
           value: DEVOPS1
         - name: MYSQL_USER
           value: wpuser
-        - name: MYSQL_PASSWORD
-          value: DEVOPS12345
         - name: MYSQL_DATABASE
           value: wpdb
+        - name: WORDPRESS_DB_PASSWORD
+            valueFrom:
+            secretKeyRef:
+              name: mysql-pass
+              key: password
+
