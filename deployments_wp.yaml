@@ -24,9 +24,9 @@ spec:
             value: mysql-service
           - name: WORDPRESS_DB_USER
             value: wpuser
+          - name: WORDPRESS_DB_PASSWORD
+            value: DEVOPS12345
           - name: WORDPRESS_DB_NAME
             value: wpdb
           - name: WORDPRESS_DEBUG
             value: “1”
-          - name: WORDPRESS_DB_PASSWORD
-            value: DEVOPS12345
