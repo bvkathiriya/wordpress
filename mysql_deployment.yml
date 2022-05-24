@@ -26,6 +26,8 @@ spec:
             secretKeyRef:
               name: mysql-pass
               key: password
+        - name: MYSQL_DB_NAME
+          value: wordpress      
         ports:
         - containerPort: 3306
           name: mysql
