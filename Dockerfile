@@ -1,6 +1,5 @@
 FROM bruceemmanuel/php7.4-apache
-
- 
+RUN docker-php-ext-install mysqli
 # App Settings
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 COPY ./application/ /var/www/html
