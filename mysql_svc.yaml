@@ -10,4 +10,4 @@ spec:
   selector:
     app: wordpress
     tier: mysql
-  type: NodePort
+  clusterIP: 10.96.0.100
