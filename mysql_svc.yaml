@@ -9,4 +9,4 @@
         - protocol: TCP
           port: 3306
           targetPort: 3306
-  clusterIP: 10.96.0.100
+      clusterIP: 10.96.0.100
