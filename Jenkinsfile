@@ -46,7 +46,7 @@ pipeline {
           sh 'kubectl delete all --all'  
           sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" wordpress-deployment.yaml'
           
-          sh 'kubectl apply -f ./ --validate=false'
+          sh 'kubectl apply -k ./ --validate=false'
           
         }
       } 
