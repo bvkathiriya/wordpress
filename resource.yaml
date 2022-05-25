@@ -1,4 +1,0 @@
-resources:
-  - mysql_deployment.yml
-  - deployments_wp.yaml
-  - pma.deployment.yml
