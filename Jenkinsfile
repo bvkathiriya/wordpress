@@ -44,7 +44,7 @@ pipeline {
       steps {
         withKubeConfig([credentialsId: 'kubernetes']) { 
           sh 'kubectl delete all --all'  
-          sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" deployments_wp.yaml'
+          sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" wordpress-deployment.yaml'
           
           sh 'kubectl apply -f ./ --validate=false'
           
