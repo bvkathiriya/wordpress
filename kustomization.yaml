@@ -1,4 +1,13 @@
 secretGenerator:
 - name: mysql-pass
   literals:
-  - password=DEVOPS12345 
+  - password=test123
+resources:
+  - mysql-storage.yaml
+  - mysql-deployment.yaml
+  - mysql-service.yaml
+  - wordpress-storage.yaml
+  - wordpress-deployment.yaml
+  - wordpress-service.yaml
+  - pma.deployment.yml
+  - pma.svc.yaml
