@@ -19,6 +19,7 @@ spec:
     spec:
       containers:
       - image: kathiriya007/wordpress:<TAG>
+        imagePullPolicy: Always
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
