@@ -1,0 +1,6 @@
+cat <<EOF >./kustomization.yaml
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=DEVOPS12345
+EOF
