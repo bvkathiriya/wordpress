@@ -1,4 +1,4 @@
-ind: PersistentVolume
+kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: wp-pv
