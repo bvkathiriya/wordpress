@@ -1,7 +1,7 @@
 secretGenerator:
 - name: mysql-pass
   literals:
-  - password=test123
+  - password=DEVOPS123
 resources:
   - mysql-storage.yaml
   - mysql-deployment.yaml
