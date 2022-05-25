@@ -1,6 +1,6 @@
-cat <<EOF >./kustomization.yaml
-secretGenerator:
-- name: mysql-pass
-  literals:
-  - password=DEVOPS12345
+cat <<EOF >>./kustomization.yaml
+resources:
+  - deployments_wp.yaml
+  - mysql_deployment.yml
+  - pma.deployment.yml
 EOF
