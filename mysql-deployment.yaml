@@ -26,6 +26,8 @@ spec:
             secretKeyRef:
               name: mysql-pass
               key: password
+        - name: MYSQL_PASSWORD
+          value: DEVOPS12345      
         - name: MYSQL_USER
           value: wpuser
         - name: MYSQL_DATABASE
