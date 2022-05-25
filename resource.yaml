@@ -1,5 +1,4 @@
-cat <<EOF >>./kustomization.yaml
 resources:
-  - mysql-deployment.yaml
-  - wordpress-deployment.yaml
-EOF
+  - mysql_deployment.yml
+  - deployments_wp.yaml
+  - pma.deployment.yml
