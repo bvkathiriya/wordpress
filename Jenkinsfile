@@ -43,6 +43,7 @@ pipeline {
    stage('Deploy to K8s') {
       steps {
         withKubeConfig([credentialsId: 'kubernetes']) { 
+          sh 'kubectl delete all --all'  
           sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" deployments_wp.yaml'
           
           sh 'kubectl apply -f ./ --validate=false'
