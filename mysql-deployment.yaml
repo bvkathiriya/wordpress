@@ -22,11 +22,11 @@ spec:
         - containerPort: 80
         volumeMounts:
         - mountPath: "/var/lib/mysql"
-          name: task-pv-storage 
+          name: mysql-task-pv-storage 
       volumes:
-      - name: task-pv-storage
+      - name: mysql-task-pv-storage
         persistentVolumeClaim:
-          claimName: task-pv-claim  
+          claimName: mysql-task-pv-claim  
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: DEVOPS1
