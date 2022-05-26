@@ -28,8 +28,3 @@ spec:
           value: DEVOPS12345
         - name: MYSQL_DATABASE
           value: wpdb
-        
-
-
-             
-        
