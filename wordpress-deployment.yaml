@@ -21,13 +21,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-        volumeMounts:
-        - mountPath: "/var/www/html"
-          name: task-pv-storage
-      volumes:
-      - name: task-pv-storage
-        persistentVolumeClaim:
-          claimName: task-pv-claim     
+            
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql-service
