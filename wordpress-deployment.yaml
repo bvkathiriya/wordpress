@@ -4,11 +4,7 @@ metadata:
   name: wordpress-deployment
   labels:
     app: wordpress
-spec:
-  volumes:
-    - name: task-pv-storage
-      persistentVolumeClaim:
-        claimName: task-pv-claim    
+   
 spec:
   replicas: 3
   selector:
@@ -28,6 +24,10 @@ spec:
         volumeMounts:
         - mountPath: "/var/www/html"
           name: task-pv-storage
+      volumes:
+      - name: task-pv-storage
+        persistentVolumeClaim:
+          claimName: task-pv-claim     
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql-service
