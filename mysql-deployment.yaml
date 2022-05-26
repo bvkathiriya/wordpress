@@ -4,11 +4,7 @@ metadata:
   name: mysql-deployment
   labels:
     app: mysql
-spec:
-  volumes:
-    - name: task-pv-storage
-      persistentVolumeClaim:
-        claimName: task-pv-claim    
+  
 spec:
   replicas: 1
   selector:
@@ -27,6 +23,10 @@ spec:
         volumeMounts:
         - mountPath: "/var/lib/mysql"
           name: task-pv-storage 
+      volumes:
+      - name: task-pv-storage
+        persistentVolumeClaim:
+          claimName: task-pv-claim  
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: DEVOPS1
