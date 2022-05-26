@@ -24,10 +24,5 @@ spec:
               value: mysql-service
             - name: PMA_PORT
               value: "3306"
-            - name: MYSQL_PASSWORD
-              value: DEVOPS12345  
             - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: mysql-pass
-                  key: password
+              value: DEVOPS1
