@@ -5,6 +5,11 @@ metadata:
   labels:
     app: mysql
 spec:
+  volumes:
+    - name: task-pv-storage
+      persistentVolumeClaim:
+        claimName: task-pv-claim    
+spec:
   replicas: 1
   selector:
     matchLabels:
@@ -19,6 +24,9 @@ spec:
         image: mysql:5.7
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: "/var/lib/mysql"
+          name: task-pv-storage 
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: DEVOPS1
@@ -28,3 +36,5 @@ spec:
           value: DEVOPS12345
         - name: MYSQL_DATABASE
           value: wpdb
+
+             
