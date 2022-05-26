@@ -26,7 +26,7 @@ spec:
       volumes:
       - name: mysql-task-pv-storage
         persistentVolumeClaim:
-          claimName: mysql-task-pv-claim  
+          claimName: mysql-task-pv-claim
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: DEVOPS1
