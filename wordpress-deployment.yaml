@@ -5,6 +5,11 @@ metadata:
   labels:
     app: wordpress
 spec:
+  volumes:
+    - name: task-pv-storage
+      persistentVolumeClaim:
+        claimName: task-pv-claim    
+spec:
   replicas: 3
   selector:
     matchLabels:
@@ -20,6 +25,9 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: "/var/www/html"
+          name: task-pv-storage
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql-service
