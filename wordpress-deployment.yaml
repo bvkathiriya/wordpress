@@ -19,6 +19,8 @@ spec:
       - name: wordpress
         image: kathiriya007/wordpress:<TAG>
         imagePullPolicy: Always
+        imagePullSecrets:
+        - name: regcred
         ports:
         - containerPort: 80
             
