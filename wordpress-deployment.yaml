@@ -20,7 +20,7 @@ spec:
         image: kathiriya007/wordpress:<TAG>
         imagePullPolicy: Always
         imagePullSecrets:
-        - name: regcred
+        - name: my-registry-key
         ports:
         - containerPort: 80
             
