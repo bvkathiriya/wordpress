@@ -15,12 +15,13 @@ spec:
       labels:
         app: wordpress
     spec:
+      imagePullSecrets:
+      - name: my-registry-key
       containers:
       - name: wordpress
         image: kathiriya007/wordpress:<TAG>
         imagePullPolicy: Always
-        imagePullSecrets:
-        - name: my-registry-key
+        
         ports:
         - containerPort: 80
             
