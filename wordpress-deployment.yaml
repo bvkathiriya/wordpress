@@ -19,7 +19,7 @@ spec:
       - name: my-registry-key
       containers:
       - name: wordpress
-        image: kathiriya007/wordpress:<TAG>
+        image: kathiriya007/wordpress:65
         imagePullPolicy: Always
         
         ports:
