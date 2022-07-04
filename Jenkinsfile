@@ -41,17 +41,17 @@ pipeline {
         }
     
 
-   #stage('Deploy to K8s') {
-     # steps {
-       # withKubeConfig([credentialsId: 'kubernetes']) { 
-        #  sh 'kubectl delete all --all'  
-          #sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" wordpress-deployment.yaml'
+   /*stage('Deploy to K8s') {
+       steps {
+         withKubeConfig([credentialsId: 'kubernetes']) { 
+           sh 'kubectl delete all --all'  
+           sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" wordpress-deployment.yaml'
           
-          #sh 'kubectl apply -f ./ --validate=false'
+           sh 'kubectl apply -f ./ --validate=false'
           
-      #  }
-    #  } 
-   # }
+        }
+       } 
+   */}
 
 
   }
