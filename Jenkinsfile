@@ -40,7 +40,7 @@ pipeline {
             }
         }
     
-
+        /*
         stage('Deploy to K8s') {
             steps {
               withKubeConfig([credentialsId: 'kubernetes']) { 
@@ -52,7 +52,7 @@ pipeline {
               }
             } 
         }
-
+       */
 
    }
 }
